@@ -36,5 +36,5 @@ Start the game by
 
 2 . Running the script conwaytest.py 
     
-    Where in multiple key word arguments for grid size , ineterval , initial state of grid can be chosen
+    Where in multiple key word arguments for grid size , interval , initial state of grid can be chosen
 
