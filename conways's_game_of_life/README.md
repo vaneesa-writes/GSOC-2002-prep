@@ -19,7 +19,7 @@ Clone the project
    git clone https://github.com/vaneesa-writes/GSOC-2002-prep.git
 ```
 
-Go to the project directory
+Go to the project directory or Open powershell in the directory
 
 ```bash
   cd GSOC-2022-prep
