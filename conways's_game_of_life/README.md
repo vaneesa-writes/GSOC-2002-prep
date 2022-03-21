@@ -11,12 +11,6 @@ To play with the module , first clone the repo
 
 
 
-## Installation
-
-```bash
-  $ git clone https://github.com/vaneesa-writes/GSOC-2002-prep.git
-```
-    
 ## Run Locally
 
 Clone the project
