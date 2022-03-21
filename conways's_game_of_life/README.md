@@ -1,6 +1,46 @@
 
+# Conway's Game of Life
 
-# Project Title
+conway game of life is a module that simulates the actual game .
+It produces patterns of the game .
 
-A brief description of what this project does and who it's for
+To play with the module , first clone the repo 
+
+
+
+
+
+
+## Installation
+
+```bash
+  $ git clone https://github.com/vaneesa-writes/GSOC-2002-prep.git
+```
+    
+## Run Locally
+
+Clone the project
+
+```bashr
+   git clone https://github.com/vaneesa-writes/GSOC-2002-prep.git
+```
+
+Go to the project directory
+
+```bash
+  cd GSOC-2022-prep
+```
+
+Start the game by
+
+1 . Running the file from terminal using
+
+```bash
+  python 'conwaysgameoflife.py' --grid-size 32 --interval 500 --glider  --gosper --stable
+
+```
+
+2 . Running the script conwaytest.py 
+    
+    Where in multiple key word arguments for grid size , ineterval , initial state of grid can be chosen
 
