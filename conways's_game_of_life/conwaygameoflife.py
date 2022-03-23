@@ -23,11 +23,22 @@ def addGlider(i, j, grid):
     grid[i:i + 3, j:j + 3] = glider
 
 def addstable(i, j, grid):
-    """adds a glider with top left cell at (i, j)"""
+
     repeat = np.array([[0, 0, 225],
                        [0, 225, 0],
                        [225, 0, 0]])
     grid[i:i + 3, j:j + 3] = repeat
+
+
+def addspaceship(i,j,grid):
+
+    spaceship = np.array([[0,255,0,0,255,0,0],
+                         [0,0,0,0,0,255,0],
+                         [0,255,0,0,0,255,0],
+                         [0,0,255,255,255,255,0]])
+
+    grid[i:i + 4, j:j + 7] = spaceship
+
 
 
 def addGosperGliderGun(i, j, grid):
@@ -102,6 +113,7 @@ def main():
     parser.add_argument('--glider', action='store_true', required=False)
     parser.add_argument('--stable', action='store_true', required=False)
     parser.add_argument('--gosper', action='store_true', required=False)
+    parser.add_argument('--spaceship', action='store_true', required=False)
     args = parser.parse_args()
 
     # set grid size
@@ -128,6 +140,11 @@ def main():
     elif args.stable:
         grid = np.zeros(N * N).reshape(N, N)
         addstable(10, 10, grid)
+        
+    elif args.spaceship:
+
+        grid = np.zeros(N * N).reshape(N, N)
+        addspaceship(15, 15, grid)
 
     else:  # populate grid with random on/off -
         # more off than on
@@ -148,7 +165,7 @@ def main():
 
     plt.show()
 
-def game(grid_size=50,interval=500,glider=False,gosper=False,stable=False):
+def game(grid_size=50,interval=500,glider=False,gosper=False,stable=False,spaceship=False):
     N = grid_size
     # set animation update interval
     updateInterval = interval
@@ -163,9 +180,14 @@ def game(grid_size=50,interval=500,glider=False,gosper=False,stable=False):
         grid = np.zeros(N * N).reshape(N, N)
         addGosperGliderGun(10, 10, grid)
     elif stable:
-        print("here")
+        # print("here")
         grid = np.zeros(N * N).reshape(N, N)
         addstable(10, 10, grid)
+
+    elif spaceship:
+
+        grid = np.zeros(N * N).reshape(N, N)
+        addspaceship(15, 15, grid)
 
     else:  # populate grid with random on/off -
         # more off than on
